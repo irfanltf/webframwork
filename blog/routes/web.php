@@ -7,9 +7,11 @@ Route::get('/', function () {
 });
 
 Route::get('/hello', function () {
-    return '<h1>hello world</h1>
+    return '<center><h1>hello world</h1>
   
     ini adalah cara menampilkan hello world menggunakan framwork laravel di minggu pertama hehehehhehehe
-
+    </center>
     ';
 });
+
+Route::get('/blog', 'BlogController@index ');
