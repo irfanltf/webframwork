@@ -14,4 +14,29 @@ Route::get('/hello', function () {
     ';
 });
 
-Route::get('/blog', 'BlogController@index ');
+
+
+// Route::get('/index', function () {
+//     echo "Uji Coba route dengan methode GET";
+// });
+
+Route::get('/show/{id?}', function ($id=1) {
+	echo "Nilai Parameter yang barusan dimasukan melalui URL adalah = ".$id;
+});
+
+
+Route::get('/edit/{nama}', function ($nama){
+	echo "Nilai Parameter yang barusan dimasukan melalui URL adalah = ".$nama;
+})->where('nama','[A-Za-z]+');
+
+
+Route::get('/index', function () {
+echo "<a href='".route('create')."'>Akses Route dengan nama </a>";
+});
+
+Route::get('/create', function () {
+echo "Route diakses menggunakan nama";
+})->name('create');
+
+
+Route::get('/produk', 'barangsController@index');
