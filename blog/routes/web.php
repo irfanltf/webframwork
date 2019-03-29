@@ -39,4 +39,15 @@ echo "Route diakses menggunakan nama";
 })->name('create');
 
 
-Route::get('/produk', 'barangsController@index');
+Route::get('/barangs', 'barangsController@index');
+
+
+Route::get('/barangs/show','barangsController@show');
+
+
+Route::get('/halaman', function(){
+
+	$title = 'Harri Puter';
+	$konten = 'hari rabu dan kamis : adalah nama hari';
+	return view('konten.halaman',compact('title','konten'));
+});
