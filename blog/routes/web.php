@@ -3,7 +3,9 @@
 
 
 Route::get('/', function () {
-    return view('welcome');
+    $title = 'Pemrograman Web Framework';
+	$konten = '';
+	return view('welcome',compact('title','konten'));
 });
 
 Route::get('/hello', function () {
@@ -51,3 +53,7 @@ Route::get('/halaman', function(){
 	$konten = 'hari rabu dan kamis : adalah nama hari';
 	return view('konten.halaman',compact('title','konten'));
 });
+
+Route::get('/pelanggan','pelangganController@index');
+
+Route::resource('produk', 'produkController');

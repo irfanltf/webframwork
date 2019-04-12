@@ -16,23 +16,17 @@
   <link href="http://localhost/blog/public/css/freelancer.min.css" rel="stylesheet">
 </head>
 <body>
-<header>
-	@include('layout.header')
-</header>
-<ul>
-	@section('sidebar')
-		<li>HTMs</li>
-		<li>CSS</li>
-		<li>JS</li>
 
+	@section('sidebar')
 	@show
-</ul>
+
 
 
 <div class="container">
 	@yield('konten')
 </div>
-  <script src="vendor/jquery/jquery.min.js"></script>
+<body>
+	<script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
