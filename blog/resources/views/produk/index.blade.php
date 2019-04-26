@@ -11,14 +11,22 @@
 			<tr>
 					<th>No</th>
 					<th>Nama produk</th>
+					<th>Kategori</th>
+					<th>Qty</th>
+					<th>Harga Beli</th>
+					<th>Harga Jual</th>
 			</tr>
 		</thead>
 	
 	<tbody>
-		@foreach($produk as $i => $v)
+		@foreach($produk as $i => $p)
 		<tr>
 			<td>{{ $i+1}}</td>
-			<td>{{ $v }}</td>
+			<td>{{ $p->nama }}</td>
+			<td>{{ $p->kategori }}</td>
+			<td>{{ $p->qty }}</td>
+			<td>{{ $p->harga_beli }}</td>
+			<td>{{ $p->harga_jual }}</td>
 		</tr>
 		@endforeach
 	</tbody>
